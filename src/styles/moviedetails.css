@@ -1,0 +1,160 @@
+/* MovieDetails container */
+.movieDetails {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-image: url('../assets/detailbackground.svg'); /* Add your background SVG */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    padding: 20px;
+    min-height: 100vh; /* Minimum height of the viewport */
+    align-items: center; /* Center align vertically */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport */
+}
+
+/* Details section */
+.detailsContent {
+    flex: 2; /* Take up two parts of the flex container */
+    margin-right: 20px; /* Space between details and poster */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align all content to the left */
+}
+
+/* Title */
+.detailsContent h1 {
+    font-size: 2.5rem; /* Larger title */
+    margin-bottom: 10px;
+    text-align: left; /* Align title to the left */
+}
+
+/* Genre and Year */
+.genre-year {
+    font-size: 1.2rem; /* Smaller font size for genre and year */
+    margin-bottom: 15px;
+    color: #aaa; /* Lighter color for genre and year */
+    text-align: left; /* Align genre and year to the left */
+}
+
+/* Overview paragraph */
+.detailsContent p {
+    font-size: 1rem;
+    line-height: 1.5; /* Increase line height for readability */
+    margin-bottom: 20px;
+    text-align: left; /* Align paragraph text to the left */
+}
+
+/* Buttons */
+.buttonContainer {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.playButton,
+.watchlistButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.playButton {
+    background-color: #e50914; /* Netflix red */
+    color: white;
+}
+
+.playButton:hover {
+    background-color: #f40612; /* Darker red on hover */
+}
+
+.watchlistButton {
+    background-color: #333; /* Dark grey */
+    color: white;
+}
+
+.watchlistButton:hover {
+    background-color: #555; /* Lighter grey on hover */
+}
+
+/* Poster container */
+.posterContainer {
+    flex: 1; /* Take up one part of the flex container */
+    display: flex;
+    justify-content: center; /* Center poster */
+    align-items: center; /* Center vertically */
+}
+
+.postercont {
+    width: 500px; /* Adjust poster size as needed */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+}
+
+/* Loading state */
+.loading {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+}
+
+/* Responsive Design - Small viewports */
+@media (max-width: 768px) {
+    .movieDetails {
+        flex-direction: column; /* Stack poster and details vertically */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .detailsContent {
+        margin-right: 0; /* Remove margin for vertical stacking */
+        margin-top: 20px; /* Add margin on top of details */
+    }
+
+    .detailsContent h1 {
+        font-size: 2rem; /* Reduce title size for smaller screens */
+    }
+
+    .detailsContent p {
+        font-size: 0.9rem; /* Slightly smaller paragraph text */
+    }
+
+    .postercont {
+        width: 350px; /* Reduce poster size */
+    }
+}
+
+/* Responsive Design - Extra Small viewports (Mobile) */
+@media (max-width: 480px) {
+    .movieDetails {
+        padding: 10px; /* Adjust padding for extra small screens */
+        overflow-y: auto; /* Enable scrolling */
+        min-height: 100vh; /* Full height for small screens */
+    }
+
+    .detailsContent h1 {
+        font-size: 1.8rem; /* Reduce title size */
+    }
+
+    .detailsContent p {
+        font-size: 0.85rem; /* Further reduce text size for mobile */
+    }
+
+    .postercont {
+        width: 250px; /* Further reduce poster size for small mobile screens */
+    }
+
+    .buttonContainer {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Reduce gap between buttons */
+    }
+
+    .playButton,
+    .watchlistButton {
+        width: 100%; /* Full width buttons for mobile */
+        padding: 8px; /* Adjust padding */
+        font-size: 0.9rem; /* Slightly smaller button text */
+    }
+}

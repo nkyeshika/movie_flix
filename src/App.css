@@ -1,38 +1,59 @@
-.App {
+/* App.css */
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #141414; /* Dark background */
+  color: white; /* Light text */
+}
+
+h1 {
   text-align: center;
+  margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Input styles */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e50914; /* Netflix red */
   color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 auto;
+  display: block;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #f40612; /* Darker red on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Movie details styles */
+.movieDetails {
+  position: relative;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  min-height: 500px; /* Adjusted min height */
+}
+
+.detailsContent {
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay for details */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.similarMovies {
+  margin-top: 20px; /* Space between movie details and similar movies */
+  background: rgba(0, 0, 0, 0.8); /* Darker background for similar movies section */
+  padding: 20px;
+  border-radius: 8px;
 }

@@ -1,0 +1,45 @@
+/* Home.css */
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    background: url('../assets/background.svg') no-repeat center center; /* Background SVG */
+    background-size: cover; /* Ensure it covers the entire area */
+    color: white;
+    padding: 20px;
+    text-align: center; /* Center text */
+    overflow: hidden; /* Prevent scrolling within the container */
+}
+body {
+    overflow: hidden; /* Hide the scrollbar */
+}
+.appName {
+    font-size: 100px; /* Large font for app name */
+    font-weight: bold;
+    margin-bottom: 20px; /* Space below the app name */
+    color: white;
+}
+
+.appDescription {
+    font-size: 30px; /* Slightly smaller font for description */
+    margin-bottom: 30px; /* Space below the description */
+    max-width: 900px; /* Limit the width for readability */
+}
+
+.getStartedButton {
+    padding: 15px 30px; /* Button padding */
+    font-size: 18px; /* Button text size */
+    color: white; /* Text color */
+    background-color: #e50914; /* Netflix-like button color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.getStartedButton:hover {
+    background-color: #f40612; /* Darker shade on hover */
+}
